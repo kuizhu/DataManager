@@ -1,0 +1,42 @@
+{
+  "pages": [
+    "pages/add/add",
+    "pages/state/state",
+    "pages/userCenter/userCenter",
+    "pages/editIndicator/editIndicator",
+    "pages/editIndicator/edit/edit",
+    "pages/inputRecords/inputRecords",
+    "pages/history/history",
+    "pages/userCenter/company/company",
+    "pages/userCenter/help/help"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "健康管理",
+    "navigationBarTextStyle": "black",
+    "enablePullDownRefresh": true
+  },
+  "tabBar": {
+    "list": [
+      {
+        "iconPath": "images/home_2.png",
+        "selectedIconPath": "images/home_1.png",
+        "pagePath": "pages/state/state",
+        "text": "状态"
+      },
+      {
+        "iconPath": "images/add_2.png",
+        "selectedIconPath": "images/add_1.png",
+        "pagePath": "pages/add/add",
+        "text": "添加"
+      },
+      {
+        "iconPath": "images/user_2.png",
+        "selectedIconPath": "images/user_1.png",
+        "pagePath": "pages/userCenter/userCenter",
+        "text": "我的"
+      }
+    ]
+  }
+}

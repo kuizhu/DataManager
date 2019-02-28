@@ -1,0 +1,41 @@
+<view class='main'>
+  <!--筛选区-->
+  <view class='top' bindtap='showSelectArea'>
+    <image class='topImgBtn' src="/images/select.png"></image>
+    <label class='labeltxt'>筛选</label>
+  </view>
+
+  <view class='selectArea' hidden='{{hide}}'>
+    <checkbox-group class="checkbox" bindchange="checkboxChange">
+      <label class="check-item" wx:for="{{mainKey}}">
+        <checkbox class="cb" checked value="{{item}}" /> {{item}}
+      </label>
+    </checkbox-group>
+  </view>
+  <button class="selectBtn" hidden='{{hide}}' bindtap='doSelection'>确定</button>
+
+  <!--时间筛选区-->
+  <view class='dateSelectArea'>
+    <picker class='pick' mode="date" style='width:{{(width-100)/2}}px' id="start" value="{{startDate}}" start="1999-01-01" bindchange="bindDateChange">
+      <view>开始：{{startDate}}</view>
+    </picker>
+
+    <picker class='pick' mode="date" style='width:{{(width-100)/2}}px' id="end" value="{{endDate}}" start="1999-01-01" bindchange="bindDateChange">
+      <view>结束：{{endDate}}</view>
+    </picker>
+    <button class="confirm" bindtap='confirm2update'>确认</button>
+  </view>
+
+
+
+  <!--图表展示区-->
+  <view class='list-item' style='width:{{width-20}}px' wx:for="{{ecValues}}" wx:for-index="index" wx:for-item="chart">
+    <view class='up'>
+      <image class='icon' src="{{imgUrl[index]}}"></image>
+      <view class='title' style='width:{{width-215}}px'>{{chosedKey[index]}}</view>
+    </view>
+    <view class='innerLine'></view>
+    <ec-canvas class='chart' style="width:{{width-10}}px" id="{{'chart-'+index}}" canvas-id="{{'canvas-'+index}}" ec="{{chart}}"></ec-canvas>
+  </view>
+
+</view>

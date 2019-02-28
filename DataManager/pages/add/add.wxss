@@ -1,0 +1,124 @@
+.weui-grids {
+    position: relative;
+    overflow: hidden;
+}
+ 
+ .weui-grids:before {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    height: 1px;
+    border-top: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+} 
+ 
+ .weui-grids:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-left: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 0;
+    transform-origin: 0 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+} 
+ 
+ .weui-grid {
+    position: relative;
+    float: left;
+    padding: 20px 10px;
+    width: 50%;
+    height: 250rpx;
+    box-sizing: border-box;
+}
+ 
+ .weui-grid:before {
+    content: " ";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 1px;
+    bottom: 0;
+    border-right: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 100% 0;
+    transform-origin: 100% 0;
+    -webkit-transform: scaleX(0.5);
+    transform: scaleX(0.5);
+} 
+ 
+ .weui-grid:after {
+    content: " ";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: 1px;
+    border-bottom: 1px solid #d9d9d9;
+    color: #d9d9d9;
+    -webkit-transform-origin: 0 100%;
+    transform-origin: 0 100%;
+    -webkit-transform: scaleY(0.5);
+    transform: scaleY(0.5);
+} 
+ 
+  .weui-grid:active {
+    background-color: #ECECEC;
+}  
+ 
+.weui-grid__bg {
+    position: relative;
+    float: left;
+    padding: 2px 2px;
+    width: 100%;
+    box-sizing: border-box;
+}
+ 
+.weui-grid__icon {
+    width: 35px;
+    height: 35px;
+    margin: 0 auto;
+}
+ 
+ 
+.weui-grid__icon image {
+    display: block;
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+ 
+.weui-grid__icon + .weui-grid__label {
+    margin-top: 10px;
+}
+ 
+ 
+.weui-grid__label {
+    display: block;
+    text-align: center;
+    color: #000;
+    font-size: 30rpx;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.floatBtn{
+  float: right;
+  position: fixed;
+  bottom: 120rpx;
+  right: 20rpx; 
+  width: 80rpx;
+  height: 80rpx;
+}
+

@@ -1,0 +1,41 @@
+<view class='main'>
+
+  <view class='top' bindtap='showSelectArea'>
+     <image class='topImgBtn' src="/images/select.png" ></image>
+     <label class='labeltxt'>筛选</label>
+  </view>
+ 
+  
+  <!--筛选-->
+  <view class='selectArea' hidden='{{hide}}'>
+    <checkbox-group class="checkbox" bindchange="checkboxChange">
+      <label class="check-item" wx:for="{{mainKeys}}">
+        <checkbox class="cb" checked value="{{item}}"/>
+        {{item}}
+      </label>
+    </checkbox-group>
+  </view>
+  <button class="selectBtn" hidden='{{hide}}' bindtap='doSelection'>确定</button>
+  
+  
+  <view class='line'></view>
+  <view class='list-item' style='width:{{width-20}}px'  wx:for="{{mainKeys}}" wx:for-item="key" wx:for-index="index">
+    <view hidden="{{visible[key]}}">
+    <view class='up'>
+      <image class='icon' src='{{imgUrl[index]}}'></image>
+      <view class='title' style='width:{{width-215}}px'>{{key}}</view>
+      <view class='time'>最近记录：{{latestData[key]["time"]}}</view>
+    </view>
+
+    <view class='innerLine'></view>
+
+    <view class='mid'>
+      <view class='mid-item' wx:for="{{indicators[key]}}" wx:for-item="sub">
+        <view class='value' wx:if="{{latestData[key][sub]!=null}}">{{latestData[key][sub]}}</view>
+        <view class='value' wx:else>—</view>
+        <view class='txt'>{{sub}}</view>
+      </view>
+    </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,35 @@
+<view class='main'>
+  <view class='list'>
+    <view class='list-item' wx:for="{{subKey}}" wx:for-index="index">
+      <label class='label-content'>{{item}}:</label>
+      <input class='item-content'  style="width:{{width-100}}px"id="{{index}}" placeholder="输入数据" bindinput='inputValue'></input>
+    </view>
+  </view>
+  <button class="confirmBtn" bindtap='send2server'>添加记录</button>
+  <view style='height:15px;width:100%'></view>
+  <!--表格记录区域-->
+  <view class="table">
+    <view class="tr bg-w">
+      <view class="th">序号</view>
+      <block wx:for="{{subKey}}">
+        <view class="th">{{item}}</view>
+      </block>
+    </view>
+    <block wx:for="{{latestRecord}}" wx:for-index="index" wx:for-item="record">
+      <view class="tr bg-g" wx:if="{{index % 2 == 0}}" bindlongtap='deleteData' data-index='{{index}}'>
+        <view class='td'>{{index+1}}</view>
+        <block wx:for="{{subKey}}" wx:for-item="key">
+          <view class='td'>{{record[key]}}</view>
+        </block>
+      </view>
+      <view class="tr" wx:else bindlongtap='deleteData' data-index='{{index}}'>
+        <view class='td'>{{index+1}}</view>
+        <block wx:for="{{subKey}}" wx:for-item="key">
+          <view class='td'>{{record[key]}}</view>
+        </block>
+      </view>
+    </block>
+  </view>
+
+
+</view>

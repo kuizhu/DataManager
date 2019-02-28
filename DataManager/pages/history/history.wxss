@@ -1,0 +1,189 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  background-color: whitesmoke;
+  width: 100%;
+  height: 100%;
+}
+
+.pickDate{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.dateSelectArea{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.pick{
+  display: flex;
+  margin:5px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  height: 40px;
+  font-size: 27rpx;
+}
+
+.confirm{
+  display: flex;
+  border-right: 5px;
+  font-size: 30rpx;
+  height: 40px;
+  width: 65px;
+  align-items: center;
+  justify-content: center
+}
+
+.list-item{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  background-color: white;
+}
+
+
+.up{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  
+}
+
+.icon{
+  display: flex;
+  margin-left: 5px;
+  flex-wrap: nowrap;
+  height: 32px;
+  width: 32px;
+}
+
+.title{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-left: 10px;
+  margin-top: 5px;
+  font-size: 35rpx;
+  color: lightskyblue;
+
+}
+
+.time{
+  display: flex;
+  flex-wrap: nowrap;
+  margin-right: 5px;
+  width: 200px;
+  justify-content:right;
+  font-size: 25rpx;
+  margin-top: 10px;
+}
+
+.line{
+  background: whitesmoke;
+  height: 10px;
+}
+
+.innerLine{
+  background: #E0E3DA;
+  height: 5rpx;
+  margin-left: 5px;
+  margin-right: 5px;
+}
+
+.mid{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  margin-top: 40rpx;
+  width: 100%;
+}
+
+
+
+ec-canvas{
+  height: 700rpx;
+}
+
+.bottom{
+  display: flex;
+  flex-direction: column;
+  justify-content:center;
+  margin-top: 20rpx;
+  margin-left: 10px;
+  margin-bottom: 5px;
+  font-size: 30rpx;
+  color: black;
+}
+
+.selectBtn{
+  display: flex;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 30px;
+  font-size: 30rpx;
+  text-align: center;
+  justify-content: center;
+  background-color: white
+}
+
+.selectArea{
+  display: flex;
+  margin-top: 10px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: whitesmoke;
+  width: 100%;
+}
+
+.checkbox{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  font-size: 30rpx;
+}
+
+.check-item{
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 15px;
+}
+
+.cb{
+  display: flex;
+  transform: scale(0.7,0.7);
+}
+
+.topImgBtn{
+  display: flex;
+  justify-content: center;
+  margin-left: 15px;
+  width: 30px;
+  height: 30px;
+}
+.top{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: white;
+}
+.labeltxt{
+  display: flex;
+  justify-content: center;
+  font-size: 30rpx;
+  margin: 5px;
+}

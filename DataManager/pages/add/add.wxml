@@ -1,0 +1,25 @@
+<view style="margin-top:10px;">
+  <view class="weui-grids">
+    <view class="weui-grid" wx:for="{{keys}}" wx:for-index="index" bindtap="toInput" data-index="{{index}}">
+        <view class='weui-grid__bg'>
+          <view class="weui-grid__icon">
+            <image src="{{imgs[index]}}" mode="scaleToFill" />
+          </view>
+          <text class="weui-grid__label">{{item}}</text>
+        </view>
+    </view>
+    <!--自定义添加更多
+    <view class="weui-grid" bindtap="addMore">
+        <view class='weui-grid__bg'>
+          <view class="weui-grid__icon">
+            <image src="/images/add_4.png" mode="scaleToFill" />
+          </view>
+        </view>
+    </view>
+    -->
+  </view>
+  <!--悬浮添加按钮-->
+  <view>
+    <image class="floatBtn" src='/images/edit.png' bindtap='editIndicator'></image>
+  </view>
+</view>

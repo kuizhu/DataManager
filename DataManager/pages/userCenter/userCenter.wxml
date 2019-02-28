@@ -1,0 +1,32 @@
+<view class="userinfo">
+    <button class="loginBtn" wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"  bindgetuserinfo="getUserInfo">登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+
+
+<view style="margin-top:30px;">
+  <view class="weui-grids">
+    <view class="weui-grid" wx:for="{{routers}}" wx:key="name">
+      <navigator url="{{item.url}}">
+        <view class='weui-grid__bg'>
+          <view class="weui-grid__icon">
+            <image src="{{item.icon}}" mode="scaleToFill" />
+          </view>
+          <text class="weui-grid__label">{{item.name}}</text>
+        </view>
+      </navigator>
+    </view>
+
+    <view class="weui-grid" >
+        <view class='weui-grid__bg'>
+          <view class="weui-grid__icon">
+            <contact-button  size="30" session-from="weapp"></contact-button>
+          </view>
+          <text class="weui-grid__label">客服</text>
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,17 @@
+<view class='main'>
+  <view class='title'>
+    <input class='title-content' id="main" value="{{mainKey}}" bindinput='changeValue'></input>
+  </view>
+  <view class='list'>
+    <view class='list-item' wx:for="{{subKey}}" wx:for-index="index">
+      <input class='item-content' style='width:{{width-80}}px' id="{{index}}" value="{{item}}" bindinput='changeValue'></input>
+      <image class='imgBtn' data-index="{{index}}" src="/images/delete.png" bindtap='deleteItem'></image>
+    </view>
+  </view>
+</view>
+
+<button class="confirm" bindtap="confirmChange">确定修改</button>
+<view>
+    <image class="floatBtn" src='/images/add_3.png' bindtap='addItem'></image>
+</view>
+

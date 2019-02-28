@@ -1,0 +1,10 @@
+<!--列表渲染-->
+<view class='main'>
+  <view class='list-item' wx:for="{{mainKey}}" bindlongtap='longPress' bindtap='editContent' data-index="{{index}}">
+    <view class="item-content">{{item}}</view>
+  </view>
+  <view class='img-item' bindtap='addIndicator'>
+    <image class="img-content" src="/images/add_4.png"></image>
+  </view>
+</view>
+

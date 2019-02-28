@@ -1,0 +1,49 @@
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: whitesmoke
+}
+
+.list-item{
+  display: flex;
+  margin: 5px;
+  height: 40px;
+  background-color: white;
+}
+
+.item-content{
+  display: flex;
+  margin-left: 15px;
+  height: 30px;
+  margin-top: 10px;
+  font-size: 33rpx;
+}
+
+.floatBtn{
+  float: right;
+  position: fixed;
+  bottom: 120rpx;
+  right: 20rpx; 
+  width: 80rpx;
+  height: 80rpx;
+}
+
+.img-item{
+  display: flex;
+  margin: 5px;
+  height: 40px;
+  background-color: white;
+  justify-content: center;
+  align-content: center
+}
+
+.img-content{
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 20px;
+  width: 20px;
+  
+}
